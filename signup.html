@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Holiday Tourism - Sign Up</title>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .signup-login-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: 50px auto;
+        }
+
+        .signup-form,
+        .login-form {
+            width: 200%;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(44, 2, 2);">
+    <header class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html" >Contact</a></li>
+                <li><a href="signup.html" class="active">Sign Up</a></li>
+                <li><a href="ouroffers.htm">Our Offers</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content container">
+        <div class="signup-login-container">
+            <div class="signup-form">
+                <form action="#" method="post">
+                    <h1>Sign Up</h1>
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                    </div>
+
+                    <button type="button" id="signup-btn" onclick="signupUser()">Sign Up</button>
+                </form>
+            </div>
+
+            <div class="login-form">
+                <form action="#" method="post" id="login-form">
+                    <h1>Login</h1>
+                    <div class="form-group">
+                        <label for="login-email">Email:</label>
+                        <input type="email" id="login-email" name="login-email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login-password">Password:</label>
+                        <input type="password" id="login-password" name="login-password" required>
+                    </div>
+
+                    <button type="button" id="login-btn" onclick="loginUser()">Login</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts.js"></script>
+    <script>
+        // Add event listeners to the login and signup buttons
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('login-btn').addEventListener('click', loginUser);
+            document.getElementById('signup-btn').addEventListener('click', signupUser);
+        });
+    </script>
+</body>
+
+</html>

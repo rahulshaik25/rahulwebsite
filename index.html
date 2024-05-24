@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Holiday Tourism</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.google.com/specimen/Roboto+Condensed"
+        rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="setDate()" class="index" style="background-color: rgb(44, 2, 2);">
+    <!--Header and Menu Section-->
+    <header class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html" >Contact</a></li>
+                <li><a href="signup.html" >Sign Up</a></li>
+                <li><a href="ouroffers.htm">Our Offers</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Booking Section-->
+    <main class="main-content container">
+
+        <div class="booking-content">
+            <h1 style="color: blue;">Rahul Tourism presents Bus ticketbooking system</h1>
+            <p>Our main motive is to give our customers a user-friendly booking system</p>
+        </div>
+
+        <div class="booking-form">
+            <div id="booking-area">
+                <h3>Explore By</h3>
+                <div class="inputs">
+                    <div class="input-group">
+                        <label for="mode">Mode</label>
+                        <select id="mode">
+                            <option value="bus">Bus</option>
+                            <option value="train">Train</option>
+                            <option value="flight">Flight</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="inputs">
+                    <div class="input-group">
+                        <label for="from">From</label>
+                        <select id="from">
+                            <option value="Delhi">Delhi</option>
+                                <option value="calcutta">calcutta</option>
+                                <option value="Indore">Indore</option>
+                                <option value="Chennai">Chennai</option>
+                                <option value="Hyderabad">Hyderabad</option>
+                                <option value="Pune">Pune</option>
+                                <option value="Ahmedabad">Ahmedabad</option>
+                                <option value="Surat">Surat</option>
+                                <option value="Jaipur">Jaipur</option>
+                                <option value="Lucknow">Lucknow</option>
+                                <option value="Kanpur">Kanpur</option>
+                                <option value="Nagpur">Nagpur</option>
+                                <option value="Indore">Indore</option>
+                                <option value="Thane">Thane</option>
+                                <option value="Bhopal">Bhopal</option>
+                                <option value="Patna">Patna</option>
+                                <option value="Vadodara">Vadodara</option>
+                                <option value="Ghaziabad">Ghaziabad</option>
+                                <option value="Ludhiana">Ludhiana</option>
+                                <option value="Agra">Agra</option>
+                                <option value="Nashik">Nashik</option>
+                                <option value="Faridabad">Faridabad</option>
+                                <option value="Meerut">Meerut</option>
+                                <option value="Rajkot">Rajkot</option>
+                                <option value="Varanasi">Varanasi</option>
+                                <option value="Srinagar">Srinagar</option>
+                                <option value="Aurangabad">Aurangabad</option>
+                                <option value="Dhanbad">Dhanbad</option>
+                                <option value="Amritsar">Amritsar</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="to">To</label>
+                        <select id="to">
+                            <option value="Delhi">Delhi</option>
+                                <option value="calcutta">calcutta</option>
+                                <option value="Indore">Indore</option>
+                                <option value="Chennai">Chennai</option>
+                                <option value="Hyderabad">Hyderabad</option>
+                                <option value="Pune">Pune</option>
+                                <option value="Ahmedabad">Ahmedabad</option>
+                                <option value="Surat">Surat</option>
+                                <option value="Jaipur">Jaipur</option>
+                                <option value="Lucknow">Lucknow</option>
+                                <option value="Kanpur">Kanpur</option>
+                                <option value="Nagpur">Nagpur</option>
+                                <option value="Indore">Indore</option>
+                                <option value="Thane">Thane</option>
+                                <option value="Bhopal">Bhopal</option>
+                                <option value="Patna">Patna</option>
+                                <option value="Vadodara">Vadodara</option>
+                                <option value="Ghaziabad">Ghaziabad</option>
+                                <option value="Ludhiana">Ludhiana</option>
+                                <option value="Agra">Agra</option>
+                                <option value="Nashik">Nashik</option>
+                                <option value="Faridabad">Faridabad</option>
+                                <option value="Meerut">Meerut</option>
+                                <option value="Rajkot">Rajkot</option>
+                                <option value="Varanasi">Varanasi</option>
+                                <option value="Srinagar">Srinagar</option>
+                                <option value="Aurangabad">Aurangabad</option>
+                                <option value="Dhanbad">Dhanbad</option>
+                                <option value="Amritsar">Amritsar</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="inputs">
+                    <div class="input-group date">
+                        <label for="departure-date">Departure</label>
+                        <input class="inp-style" type="date" id="departure-date">
+                    </div>
+                    <div class="input-group date">
+                        <label for="return-date">Return</label>
+                        <input class="inp-style" type="date" id="return-date">
+                    </div>
+                </div>
+               
+                <div class="inputs">
+                    <div class="input-group">
+                        <label for="coupon-code">Coupon Code</label>
+                        <input type="text" id="coupon-code" placeholder="Enter your coupon code">
+                    </div>
+                    <button class="btn-style" onclick="applyCoupon()">Apply Coupon</button>
+                </div>
+                <div class="inputs">
+                    <div class="input-group f-class">
+                        <div>
+                            <label for="first-class">First Class ($150)</label>
+                            <input class="inp-style inp-width" type="number" id="first-class" value="0"
+                                onkeyup="convertSmallerToZero('first-class')">
+                        </div>
+                        <div class="plus-minus-btn">
+                            <button onclick="ticketHandler('first-class', true)">+</button>
+                            <button onclick="ticketHandler('first-class', false)">-</button>
+                        </div>
+                    </div>
+                    <div class="input-group f-class">
+                        <div>
+                            <label for="economy">Economy ($100)</label>
+                            <input class="inp-style inp-width" type="number" id="economy" value="0"
+                                onkeyup="convertSmallerToZero('economy')">
+                        </div>
+                        <div class="plus-minus-btn">
+                            <button onclick="ticketHandler('economy', true)">+</button>
+                            <button onclick="ticketHandler('economy', false)">-</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calculations">
+                    <div class="amount">
+                        <div class="left">
+                            <p>Subtotal</p>
+                        </div>
+                        <div class="right">
+                            <p id="sub-total">$0</p>
+                        </div>
+                    </div>
+
+                    <div class="amount">
+                        <div class="left">
+                            <p>Charge 10% VAT</p>
+                        </div>
+                        <div class="right">
+                            <p id="vat">$0</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="amount">
+                        <div class="left">
+                            <h4>Total</h4>
+                        </div>
+                        <div class="right">
+                            <p id="total">$0</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-style" onclick="bookMessage()">Book Now</button>
+            </div>
+
+            <div id="booking-message-area">
+
+            </div>
+        </div>
+    </main>
+    <!--Thank You-->
+    <script src="scripts.js"></script>
+</body>
+
+</html>

@@ -12,9 +12,17 @@
             background-color: #f5f5f5;
         }
 
-        .container {
-            width: 80%;
+        .container-header {
+             
+            width: 1200px;
+            max-width: 85%;
             margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            margin-left: 0px;
+            margin-right: 800px;
+            align-items: center;
+    
         }
 
         .offers-content {
@@ -33,25 +41,43 @@
         .offer-item {
             margin-bottom: 20px;
         }
+        .shining-text :hover
+        {
+            color: blue;
+        }
+        .shining-text {
+                font-size: 24px;
+             font-weight: bold;
+                animation: shine 3s infinite; 
+    }
+
+        @keyframes shine {
+        0% { color: red; }       
+        33% { color: yellow; }    
+        66% { color: blue; }      
+        100% { color: red; }      
+        }
     </style>
 </head>
 
 <body style="background-color: rgb(44, 2, 2);">
-    <header class="container">
+    <header class="container-header">
+        <div class="logoh"><img src="logo.png" class="logo"></div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="signup.html">Sign Up</a></li>
-                <li><a href="ouroffers.htm">Our Offers</a></li>
+                <li><a href="ouroffers.htm" href="#">Our Offers</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="main-content container">
         <div class="offers-content">
-            <h1>!!!! Our Special Offers  !!!!</h1>
+            <div class="shining-text">
+            !!!! Our Special Offers  !!!! </div>
             <br>
 
             <div class="offer-item">

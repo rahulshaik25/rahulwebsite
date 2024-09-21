@@ -4,6 +4,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
+    
 }
 
 body {
@@ -13,24 +14,50 @@ body {
     background-position: center center;
     background-attachment: scroll;
     background-size: cover;
+    
+.logo
+{
+    
+    width: 10px 10px;
+    height: 12vh;
+    border: 3px solid black;
+    border-radius: 10%;
+    display: flex;
+    
 }
 
+.logoh
+{
+    
+}
+
+}
 nav {
     height: 50px;
     width: 100%;
     padding: 20px 0;
+    
+    
 }
 
-.container {
+.container-header {
     width: 1200px;
     max-width: 85%;
     margin: 0 auto;
+    display: flex;
+   justify-content: center;
+   margin-left: 0px;
+   margin-right: 800px;
+   align-items: center;
+    
 }
 
 nav ul {
     display: flex;
     justify-content: flex-end;
+    gap: 60px;
     margin: 0px 6px;
+    
 }
 
 nav ul li a {
@@ -44,6 +71,8 @@ nav ul li a:hover,
 a.active {
     background-color: #52AF3A;
     border-radius: 5px;
+    text-decoration: underline;
+    color: rgb(2, 7, 66);
 }
 
 .main-content {
@@ -75,6 +104,7 @@ a.active {
     float: left;
     width: 450px;
     margin: 50px 0px 0px 80px;
+    margin-left: 400px;
 }
 
 .booking-form h3 {
@@ -172,8 +202,8 @@ a.active {
 #booking-message-area table,
 #booking-message-area td,
 #booking-message-area th {
-    border: 1px solid green;
-    border-collapse: collapse;
+border: 1px solid green;
+border-collapse: collapse;
 }
 
 #booking-message-area td,
@@ -271,6 +301,21 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.login-form
+{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+}
+#login-btn:hover , #signup-btn:hover
+{
+    color: aqua;
+    ;
+}
 .form-group {
     margin-bottom: 20px;
 }
@@ -300,4 +345,32 @@ button {
 
 button:hover {
     background-color: #45a049;
+}
+
+
+
+.signup-login-container
+{
+    gap: 80px;
+
+}
+
+.header
+{
+    background-color: grey;
+    position: sticky;
+    display: block;
+}
+
+.shining-text {
+    font-size: 24px;
+ font-weight: bold;
+    animation: shine 3s infinite; /* 3 seconds for a full cycle, repeats infinitely */
+}
+
+@keyframes shine {
+0% { color: red; }       /* Start with red */
+33% { color: yellow; }    /* Change to yellow at 33% of the cycle */
+66% { color: blue; }      /* Change to blue at 66% of the cycle */
+100% { color: red; }      /* Back to red at the end of the cycle */
 }

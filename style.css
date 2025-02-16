@@ -4,40 +4,38 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
-    
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    
+    background-color: black !important; /* Ensures black background */
+    color: white; /* Ensures text is visible */
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;
     background-size: cover;
-    
-.logo
-{
-    
+}
+
+/* Fixing the specific pages */
+body.index, 
+body.about {
+    background-color: black !important;
+    background-image: none !important; /* Removes the background image */
+}
+
+/* Logo */
+.logo {
     width: 10px 10px;
     height: 12vh;
     border: 3px solid black;
     border-radius: 10%;
     display: flex;
-    
 }
 
-.logoh
-{
-    
-}
-
-}
 nav {
     height: 50px;
     width: 100%;
     padding: 20px 0;
-    
-    
 }
 
 .container-header {
@@ -45,11 +43,11 @@ nav {
     max-width: 85%;
     margin: 0 auto;
     display: flex;
-   justify-content: center;
-   margin-left: 0px;
-   margin-right: 800px;
-   align-items: center;
-    
+    justify-content: center;
+    margin-left: 0px;
+    margin-right: 800px;
+    align-items: center;
+    position: sticky;
 }
 
 nav ul {
@@ -57,11 +55,10 @@ nav ul {
     justify-content: flex-end;
     gap: 60px;
     margin: 0px 6px;
-    
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
     padding: 10px;
     text-transform: uppercase;
     margin-left: 30px;
@@ -70,9 +67,7 @@ nav ul li a {
 nav ul li a:hover,
 a.active {
     background-color: #52AF3A;
-    border-radius: 5px;
-    text-decoration: underline;
-    color: rgb(2, 7, 66);
+    border-radius: 10px;
 }
 
 .main-content {
@@ -83,7 +78,7 @@ a.active {
 }
 
 .booking-content {
-    color: #fff;
+    color: white;
     width: 100%;
     float: left;
     margin-left: 50px;
@@ -97,7 +92,7 @@ a.active {
 }
 
 .booking-form {
-    background-color: #fff;
+    background-color: white;
     border: 1px solid #ddd;
     padding: 10px;
     border-radius: 5px;
@@ -105,16 +100,14 @@ a.active {
     width: 450px;
     margin: 50px 0px 0px 80px;
     margin-left: 400px;
+    color: black;
 }
 
 .booking-form h3 {
     margin: 10px 0px;
 }
 
-.booking-form .input-group {
-    margin: 10px 0;
-}
-
+.booking-form .input-group,
 .booking-form .calculations {
     margin: 10px 0;
 }
@@ -174,7 +167,7 @@ a.active {
     padding: 10px;
     border-radius: 5px;
     border: none;
-    color: #fff;
+    color: white;
     font-weight: 500;
     background-color: #52AF3A;
 }
@@ -202,8 +195,8 @@ a.active {
 #booking-message-area table,
 #booking-message-area td,
 #booking-message-area th {
-border: 1px solid green;
-border-collapse: collapse;
+    border: 1px solid green;
+    border-collapse: collapse;
 }
 
 #booking-message-area td,
@@ -220,7 +213,7 @@ border-collapse: collapse;
 
 /* About Us Page Styles */
 .about-content {
-    color: #fff;
+    color: white;
     width: 100%;
     float: left;
     margin-left: 50px;
@@ -272,50 +265,33 @@ border-collapse: collapse;
     color: #888;
 }
 
-body.index {
-    background: url("https://www.shutterstock.com/image-vector/airplane-line-path-vector-icon-air-1070132657") center center fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-body.about {
-    background: url("https://www.shutterstock.com/image-vector/airplane-line-path-vector-icon-air-1070132657") center center fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f5f5f5;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
+/* Signup and Login */
 .signup-form {
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: black;
 }
 
-.login-form
-{
+.login-form {
     margin-top: 50px;
     margin-bottom: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: auto;
-    background-color: #fff;
+    background-color: white;
     border-radius: 8px;
     padding: 20px;
+    color: black;
 }
-#login-btn:hover , #signup-btn:hover
-{
+
+#login-btn:hover, 
+#signup-btn:hover {
     color: aqua;
-    ;
 }
+
 .form-group {
     margin-bottom: 20px;
 }
@@ -332,11 +308,12 @@ input {
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
+    color: black;
 }
 
 button {
     background-color: #4caf50;
-    color: #fff;
+    color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
@@ -347,30 +324,26 @@ button:hover {
     background-color: #45a049;
 }
 
-
-
-.signup-login-container
-{
+.signup-login-container {
     gap: 80px;
-
 }
 
-.header
-{
+.header {
     background-color: grey;
     position: sticky;
     display: block;
 }
 
+/* Shining Text Animation */
 .shining-text {
     font-size: 24px;
- font-weight: bold;
-    animation: shine 3s infinite; /* 3 seconds for a full cycle, repeats infinitely */
+    font-weight: bold;
+    animation: shine 3s infinite;
 }
 
 @keyframes shine {
-0% { color: red; }       /* Start with red */
-33% { color: yellow; }    /* Change to yellow at 33% of the cycle */
-66% { color: blue; }      /* Change to blue at 66% of the cycle */
-100% { color: red; }      /* Back to red at the end of the cycle */
+    0% { color: red; }
+    33% { color: yellow; }
+    66% { color: blue; }
+    100% { color: red; }
 }
